@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Yale Birding Student Association',
-  author: 'Tails Azimuth',
+  author: 'Anish Lakkapragada',
   headerTitle: 'YBSA',
   description: "Yale's Birding Student Association.",
   language: 'en-us',

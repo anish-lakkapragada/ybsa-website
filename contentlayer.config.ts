@@ -150,8 +150,8 @@ export const Board = defineDocumentType(() => ({
   fields: {
     name: { type: 'string', required: true },
     avatar: { type: 'string' },
-    occupation: { type: 'string' },
-    company: { type: 'string' },
+    resco: { type: 'string' },
+    cls: { type: 'string' },
     email: { type: 'string' },
   },
   computedFields,
