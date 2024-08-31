@@ -3,7 +3,7 @@
  */
 
 import { Authors, allAuthors } from '.contentlayer/generated'
-import {Board, allBoards} from ".contentlayer/generated";
+import {allBoards} from ".contentlayer/generated";
 
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import BoardMemberLayout from '@/layouts/BoardMemberLayout'
