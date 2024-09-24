@@ -153,6 +153,7 @@ export const Board = defineDocumentType(() => ({
     resco: { type: 'string' },
     cls: { type: 'string' },
     email: { type: 'string' },
+    displayIndex: {type: 'number'}
   },
   computedFields,
 }))

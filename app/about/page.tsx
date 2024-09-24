@@ -13,7 +13,12 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'About' })
 
 export default function Page() {
-  const author = allAuthors.find((p) => p.slug === 'default') as Authors
+  const author = allAuthors.find((p) => p.slug === 'default') as Authors; 
+  
+  function sortingFunction(boardA, boardB) {
+    return boardA.displayIndex - boardB.displayIndex; 
+  }
+
   const mainContent = coreContent(author);
 
   return (
@@ -24,7 +29,7 @@ export default function Page() {
           </h1>
           <hr className="border-t-2 border-gray-300"></hr>
       </div>
-      {allBoards.map((boardMember) => {
+      {allBoards.sort(sortingFunction).map((boardMember) => {
           return <BoardMemberLayout key={boardMember._id} content={coreContent(boardMember)}>
               <MDXLayoutRenderer code={boardMember.body.code} />
           </BoardMemberLayout> 

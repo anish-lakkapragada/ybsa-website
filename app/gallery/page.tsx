@@ -1,9 +1,36 @@
 import "react-photo-album/rows.css";
 import { genPageMetadata } from 'app/seo'
+import fs from 'fs';
+import path from 'path';
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export async function getStaticProps() {
+  const imagesDir = path.join(process.cwd(), 'public/static/images/gallery');
+  console.log(`brah: ${imagesDir}`);
+
+  const filenames = fs.readdirSync(imagesDir);
+  console.log(filenames);
+  
+  const images = filenames.filter((file) =>
+    file.match(/\.(jpg|jpeg|png|gif)$/)
+  );
+
+  return {
+    props: {
+      images,
+    },
+  };
+}
+
+export const metadata = genPageMetadata({ title: 'Gallery' })
 
 export default function Gallery() {
+  const imagesDir = path.join(process.cwd(), 'public/static/images/gallery');
+  const filenames = fs.readdirSync(imagesDir);
+  console.log(filenames);
+  
+  const images = filenames.filter((file) =>
+    file.match(/\.(jpg|jpeg|png|gif)$/)
+  );
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
