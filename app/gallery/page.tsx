@@ -6,9 +6,17 @@ import Image from "next/image";
 export const metadata = genPageMetadata({ title: 'Gallery' });
 import sizeOf from "image-size";
 
+
+interface ImageType {
+  name: string; 
+  width: number | undefined; 
+  height: number | undefined; 
+  alt: string;
+}
+
 export default function Gallery(){
 
-  const imageSet: any[] = []; 
+  const imageSet: ImageType[] = []; 
   const folders = fs.readdirSync('public/static/images/gallery');
   for (const folder of folders) {
     if (folder == ".DS_Store" || folder.includes("MACOSX")) {continue;}
