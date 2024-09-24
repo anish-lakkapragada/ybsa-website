@@ -54,6 +54,7 @@ export default function Gallery(){
           <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-4">
             {imageSet.map((image, i) => (
               <div key={i + 1} className="mb-4 relative">
+                {/*<>*/}
                 <Image
                   src={image.name}
                   alt={"A photograph of YBSA on one of its birding trips."}
@@ -62,6 +63,8 @@ export default function Gallery(){
                   layout="responsive"
                   loading="eager"
                 />
+                {/* <p className="my-2 text-gray"> {image.name.substring(image.name.lastIndexOf("/") + 1, image.name.lastIndexOf("-"))} </p> 
+                </> */}
               </div>
             ))}
            </div>
