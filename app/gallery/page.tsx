@@ -8,7 +8,7 @@ import sizeOf from "image-size";
 
 export default function Gallery(){
 
-  let imageSet: any[] = []; 
+  const imageSet: any[] = []; 
   const folders = fs.readdirSync('public/static/images/gallery');
   for (const folder of folders) {
     if (folder == ".DS_Store" || folder.includes("MACOSX")) {continue;}
