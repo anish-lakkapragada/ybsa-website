@@ -22,8 +22,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        // sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
-        sans: ['Galvji']
+        sans: ['Galvji'], 
       },
       colors: {
         primary: colors.blue,
