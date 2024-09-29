@@ -22,7 +22,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Galvji'], 
+        sans: ['Montserrat', 'sans-serif'], 
       },
       colors: {
         primary: colors.blue,

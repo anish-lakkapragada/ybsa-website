@@ -12,6 +12,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/700.css';
+
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
