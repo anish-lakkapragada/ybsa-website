@@ -51,23 +51,21 @@ export default function Gallery(){
           </p>
           <hr className="border-t-2 border-gray-300"></hr>
 
-          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-4">
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-4 space-y-4">
             {imageSet.map((image, i) => (
-              <div key={i + 1} className="mb-4 relative">
-                {/*<>*/}
+              <div key={i + 1} className="relative">
                 <Image
                   src={image.name}
                   alt={"A photograph of YBSA on one of its birding trips."}
                   width={image.width}
                   height={image.height}
                   layout="responsive"
-                  loading="eager"
+                  loading="lazy"
                 />
-                {/* <p className="my-2 text-gray"> {image.name.substring(image.name.lastIndexOf("/") + 1, image.name.lastIndexOf("-"))} </p> 
-                </> */}
               </div>
             ))}
            </div>
+ 
         </div>
       </div>
     </>
