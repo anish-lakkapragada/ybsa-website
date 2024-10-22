@@ -1,7 +1,14 @@
+/** 
+ * Things to ask about: 
+ * (a) which photos should use with the cards? 
+ * (b) do we have a form for "Joining Us"? 
+ * (c) 
+ */
 import "react-photo-album/rows.css";
 import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'Gallery' });
 import Image from "next/image";
+import Card from "@/components/Card";
 
 export default function HomeFunction(){
   return (
@@ -21,16 +28,14 @@ export default function HomeFunction(){
           
           <h3 className="text-4xl text-center"> <strong> What do we do? </strong> </h3>
 
-          {/** 
-           * Sections for this website we are hoping for: 
-           * (1) Showing the entire team together. 
-           * (2) Explaining what we do? 
-           *    (cards?)
-           *    --> birding trips 
-           *    --> birding meetings 
-           *    --> bird advocacy 
-           */}
- 
+          <div className="flex flex-row gap-2"> 
+            <Card title="Birding Trips" description="We go on biweekly birding trips at Yale University and the broader New Haven." href="https://yale.edu" imgSrc="https://picsum.photos/536/354" />
+            <Card title="Bird Education" description="We host fun biweekly meetings to review birding concepts and teach about birding!" href="https://yale.edu" imgSrc="https://picsum.photos/536/354" />
+            <Card title="Bird Advocacy" description="We contribute to social efforts for bird conservation, such as the Yale Bird-Friendly Building Initiative." href="https://yale.edu" imgSrc="https://picsum.photos/536/354" />
+          </div> 
+
+          <h3 className="text-4xl text-center"> <strong> Join us! </strong> </h3>
+
         </div>
       </div>
     </>
