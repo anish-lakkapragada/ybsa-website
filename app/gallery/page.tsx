@@ -24,18 +24,17 @@ export default function Gallery(){
     const filenames = fs.readdirSync(imagesDir).filter((file) =>
       file.match(/\.(jpg|jpeg|png|gif)$/)
     );
+    console.log(filenames);
     for (const file of filenames) {
       const imagePath = path.join(imagesDir, file);
       const dimensions = sizeOf(imagePath);
-      console.log(`/public/static/images/gallery/${folder}/` + file);
-      console.log(`${dimensions.width} ${dimensions.height}`)
       imageSet.push({
         name: `/static/images/gallery/${folder}/` + file,
         width: dimensions.width,
         height: dimensions.height,
-        alt: `A photograph from our trip to ${folder.substring(0, folder.indexOf("-"))} in ${folder.substring(folder.indexOf("-") + 1)}!`
+        alt: imagePath.includes("Photographs") ? `A photograph or drawing by one of our members.` : `A photograph from our trip to ${folder.substring(0, folder.indexOf("-"))} in ${folder.substring(folder.indexOf("-") + 1)}!`
       });
-    }
+    } 
   }
 
   return (
