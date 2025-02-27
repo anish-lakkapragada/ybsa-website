@@ -36,6 +36,9 @@ export default function HomeFunction(){
 
           <h3 className="text-4xl text-center"> <strong> Join us! </strong> </h3>
 
+          {/* <p className="text-sm"> <em> “Yale” and “Yale University” are registered trademarks of Yale University.  This website is a student run website and is maintained, hosted, and operated independently of Yale University. 
+The activities on this website are not supervised or endorsed by Yale and information contained on this website does not necessarily reflect the opinions or official positions of the University. </em> </p> */}
+        </div>
       </div>
     </>
   )
