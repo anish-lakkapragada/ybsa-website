@@ -36,7 +36,6 @@ export default function HomeFunction(){
 
           <h3 className="text-4xl text-center"> <strong> Join us! </strong> </h3>
 
-        </div>
       </div>
     </>
   )
